@@ -1,6 +1,3 @@
-/* =========================================
-   Configurações Globais e Reset
-========================================= */
 * {
     margin: 0;
     padding: 0;
@@ -9,7 +6,7 @@
 }
 
 body {
-    background-color: #ffffff; /* Fundo totalmente branco */
+    background-color: #ffffff; 
     color: #333333; 
     display: flex;
     justify-content: center;
@@ -30,18 +27,12 @@ h1 {
     font-size: 2.2rem;
 }
 
-/* =========================================
-   Layout em Grid (Responsivo)
-========================================= */
 .grid-flashcards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
 }
 
-/* =========================================
-   Estrutura Base do Cartão (Efeito 3D)
-========================================= */
 .cartao {
     background-color: transparent;
     height: 380px; 
@@ -62,9 +53,6 @@ h1 {
     transform: rotateY(180deg);
 }
 
-/* =========================================
-   Faces do Cartão (Frente e Verso)
-========================================= */
 .cartao__face {
     position: absolute;
     width: 100%;
@@ -76,14 +64,13 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra para o cartão aparecer no fundo branco */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
 }
 
-/* Frente e Verso */
 .cartao__face--frente, 
 .cartao__face--verso {
-    background-color: #ffffff; /* Fundo do cartão branco */
-    border: 1px solid #dcdcdc; /* Borda cinza bem clara */
+    background-color: #ffffff; 
+    border: 1px solid #dcdcdc; 
     color: #333333;
 }
 
@@ -103,9 +90,6 @@ h1 {
     text-align: center;
 }
 
-/* =========================================
-   Elementos Internos (Texto e Imagens)
-========================================= */
 .categoria {
     font-size: 0.75rem;
     text-transform: uppercase;
