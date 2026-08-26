@@ -4,12 +4,6 @@
     --cor-cartao: #ffffff;
     --cor-borda: #ccc;
 }
-.modo-escuro {
-    --cor-fundo: #1a1a1a;
-    --cor-texto: #f4f4f4;
-    --cor-cartao: #2c2c2c;
-    --cor-borda: #444;
-}
 
 body {
     background-color: var(--cor-fundo);
@@ -22,21 +16,6 @@ body {
 
 header {
     padding: 20px;
-}
-
-#btn-tema {
-    padding: 10px 20px;
-    background-color: #0056b3;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-top: 10px;
-}
-
-#btn-tema:hover {
-    background-color: #004494;
 }
 
 #container-cards {
