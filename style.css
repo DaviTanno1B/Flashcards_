@@ -1,8 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
+    box-sizing: border-box; }
 
 body {
     display: flex;
@@ -36,19 +35,19 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 30px 20px;
+    padding: 20px;
 }
 
 h2 {
-    margin-bottom: 30px;
-    color: #333;
+    margin-bottom: 20px;
 }
 
-.container-flashcards {
+.container-cards {
     display: flex;
-    gap: 25px;
-    flex-wrap: wrap;
-    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    padding-bottom: 30px;
 }
 
 footer {
@@ -58,66 +57,69 @@ footer {
     text-align: center;
 }
 
-.flashcard {
-    width: 300px;
-    height: 220px;
-    perspective: 1000px; 
-    cursor: pointer; 
+.cartao {
+    width: 260px;
+    height: 350px; 
+    perspective: 1000px;
 }
 
-.flashcard-interno {
+.cartao-interno {
     position: relative;
     width: 100%;
     height: 100%;
-    transition: transform 0.6s ease-in-out;
+    transition: transform 0.8s;
     transform-style: preserve-3d;
 }
 
-.flashcard:hover .flashcard-interno {
+.cartao:hover .cartao-interno {
     transform: rotateY(180deg);
 }
 
-.flashcard-frente,
-.flashcard-verso {
+.cartao-frente,
+.cartao-verso {
     position: absolute;
     width: 100%;
     height: 100%;
     border-radius: 12px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-    backface-visibility: hidden; 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    backface-visibility: hidden;
+    background-color: #fff;
+    overflow: hidden; 
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 20px;
 }
 
-.flashcard-frente {
-    background-color: #ffffff;
+.cartao-frente {
+    justify-content: flex-start;
+}
+
+.cartao-verso {
+    transform: rotateY(180deg);
+    justify-content: center;
+    padding: 20px; 
+}
+
+.cartao-imagem {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.cartao-frente h3 {
     color: #333;
-    border: 3px solid #7e3e1c;
+    padding: 0 10px;
 }
 
-.flashcard-frente h3 {
-    color: #7e3e1c;
+.cartao-verso h3 {
+    color: #7e3e1c; 
     margin-bottom: 15px;
-    font-size: 1.2rem;
 }
 
-.flashcard-verso {
-    background-color: #7e3e1c;
-    color: #ffffff;
-    transform: rotateY(180deg); 
-}
-
-.flashcard-verso h3 {
-    margin-bottom: 15px;
-    color: #f1c40f; 
-    font-size: 1.2rem;
-}
-
-.flashcard-verso p {
-    font-size: 1.1rem;
-    line-height: 1.4;
+.cartao-verso p {
+    font-size: 15px;
+    line-height: 1.5;
+    color: #444;
 }
